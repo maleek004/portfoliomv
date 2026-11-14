@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academic Planner | Abdulmaleek Mubaraq - Student Management Platform</title>
+    <meta name="description" content="Interactive JavaScript academic task planner and weekly study schedule for B.Sc. Software Engineering at MIVA Open University." />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+</head>
+<body class="is-preload">
+
+    <!-- Semantic Header & Navigation Sidebar -->
+    <header id="header">
+        <div class="top">
+            <div id="logo">
+                <span class="image avatar48"><img src="images/avatar.jpg" alt="Portrait of Abdulmaleek Mubaraq" /></span>
+                <h1 id="title">Abdulmaleek<br />Mubaraq</h1>
+                <p>B.Sc. Software Engineering<br />Data &amp; Analytics Engineer</p>
+                <span class="uni-badge">MIVA Open University</span>
+            </div>
+
+            <nav id="nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="index.html"><span class="icon solid fa-home">Home</span></a></li>
+                    <li><a href="about.html"><span class="icon solid fa-user-graduate">About Me</span></a></li>
+                    <li><a href="projects.html"><span class="icon solid fa-laptop-code">Projects</span></a></li>
+                    <li><a href="planner.html" class="active" aria-current="page"><span class="icon solid fa-tasks">Academic Planner</span></a></li>
+                    <li><a href="contact.html"><span class="icon solid fa-envelope">Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="bottom">
+            <ul class="icons">
+                <li><a href="https://x.com/abdulmaleekola" target="_blank" rel="noopener" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.linkedin.com/in/mubaraq-abdulmaleek/" target="_blank" rel="noopener" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/maleek004" target="_blank" rel="noopener" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:mubaraqabdulmaleek@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Semantic Content -->
+    <main id="main">
+
+        <!-- Page Hero -->
+        <section class="one dark cover page-hero">
+            <div class="container">
+                <span class="hero-eyebrow"><i class="icon solid fa-calendar-check"></i> Interactive Task Management System</span>
+                <h1>Academic Planner</h1>
+                <p>
+                    Organize coursework, assignments, exam preparation, and engineering milestones for my
+                    <strong>B.Sc. Software Engineering</strong> program at <strong>MIVA Open University</strong>.
+                    Add new tasks, mark tasks as completed, or delete tasks with real-time JavaScript DOM updates.
+                </p>
+            </div>
+        </section>
+
+        <!-- Interactive Task Manager Section -->
+        <section id="academic-planner" class="two">
+            <div class="container">
+                <header class="section-header-left">
+                    <h2>Coursework &amp; Study Task Manager</h2>
+                    <p>Tasks are managed dynamically via JavaScript arrays, functions, and persisted in your browser.</p>
+                </header>
+
+                <!-- Dynamic Task Statistics Cards -->
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <span class="stat-number" id="planner-total-count">5</span>
+                        <span class="stat-label">Total Tasks</span>
+                        <span class="stat-desc">All scheduled academic activities</span>
+                    </article>
+                    <article class="stat-card">
+                        <span class="stat-number" id="planner-completed-count">2</span>
+                        <span class="stat-label">Completed</span>
+                        <span class="stat-desc">Finished coursework &amp; milestones</span>
+                    </article>
+                    <article class="stat-card">
+                        <span class="stat-number" id="planner-pending-count">3</span>
+                        <span class="stat-label">Pending</span>
+                        <span class="stat-desc">Upcoming assignments &amp; study tasks</span>
+                    </article>
+                </div>
+
+                <!-- Two-Column Planner Layout: Add Task Form + Interactive Task List -->
+                <div class="planner-layout">
+
+                    <!-- Left Column: Add Task Form -->
+                    <aside class="planner-panel" aria-labelledby="add-task-heading">
+                        <h3 id="add-task-heading"><i class="icon solid fa-plus-circle"></i> Add New Academic Task</h3>
+
+                        <div id="planner-feedback" class="form-status-banner" role="status" aria-live="polite"></div>
+
+                        <form id="planner-add-form" action="#" method="post" novalidate>
+                            <div class="field-group">
+                                <label for="task-title">Task Description <span class="required-star" aria-hidden="true">*</span></label>
+                                <span id="task-title-hint" class="hint">Example: Complete Software Architecture Lab Assignment</span>
+                                <input
+                                    type="text"
+                                    id="task-title"
+                                    name="taskTitle"
+                                    required
+                                    aria-describedby="task-title-hint"
+                                    placeholder="Enter academic task or assignment..."
+                                />
+                                <div id="task-title-error" class="error-msg">
+                                    <span role="img" aria-label="Error">❌</span> Please enter a task description before adding.
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="task-course">Course / Category</label>
+                                <select id="task-course" name="taskCourse">
+                                    <option value="Web Technologies">Web Technologies</option>
+                                    <option value="SEN 102 - Software Engineering">SEN 102 - Software Engineering</option>
+                                    <option value="COS 101 - Computer Science">COS 101 - Computer Science</option>
+                                    <option value="MTH 101 - Mathematics">MTH 101 - Mathematics</option>
+                                    <option value="Data Engineering Project">Data Engineering Project</option>
+                                    <option value="Exam Preparation">Exam Preparation</option>
+                                </select>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="task-priority">Priority Level</label>
+                                <select id="task-priority" name="taskPriority">
+                                    <option value="High">High Priority</option>
+                                    <option value="Medium" selected>Medium Priority</option>
+                                    <option value="Low">Low Priority</option>
+                                </select>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="task-due-date">Target Due Date</label>
+                                <input type="date" id="task-due-date" name="taskDueDate" value="2026-11-25" />
+                            </div>
+
+                            <button type="submit" class="button primary-btn" style="width: 100%;">
+                                <i class="icon solid fa-plus"></i> Add Task to Planner
+                            </button>
+                        </form>
+                    </aside>
+
+                    <!-- Right Column: Task List, Progress Bar & Controls -->
+                    <div class="planner-panel">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5em;">
+                            <h3 style="margin-bottom: 0;"><i class="icon solid fa-list-ul"></i> My Academic Tasks</h3>
+                            <span id="planner-progress-text" style="font-size: 0.8em; font-weight: 600; color: var(--brand-primary-dark);">40% Completed</span>
+                        </div>
+
+                        <div class="progress-bar-container" aria-hidden="true">
+                            <div id="planner-progress-fill" class="progress-bar-fill" style="width: 40%;"></div>
+                        </div>
+
+                        <!-- Filter & Batch Action Toolbar -->
+                        <div class="task-toolbar">
+                            <div style="display: flex; gap: 0.45em; flex-wrap: wrap;" role="group" aria-label="Filter tasks by status">
+                                <button type="button" class="filter-btn planner-filter-btn active" data-filter="all">All</button>
+                                <button type="button" class="filter-btn planner-filter-btn" data-filter="pending">Pending</button>
+                                <button type="button" class="filter-btn planner-filter-btn" data-filter="completed">Completed</button>
+                            </div>
+
+                            <div style="display: flex; gap: 0.45em; flex-wrap: wrap;">
+                                <button type="button" id="planner-clear-completed" class="filter-btn" title="Remove all completed tasks">
+                                    Clear Completed
+                                </button>
+                                <button type="button" id="planner-reset-tasks" class="filter-btn" title="Restore sample MIVA coursework tasks">
+                                    Reset Sample Tasks
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Task List Container -->
+                        <ul id="planner-task-list" class="task-list" aria-live="polite"></ul>
+
+                        <div id="planner-empty-state" class="empty-planner-state" style="display: none;">
+                            <p style="margin-bottom: 0.5em; font-weight: 600;">No tasks match the current filter.</p>
+                            <p style="margin-bottom: 0; font-size: 0.85em;">Use the form on the left to add a new academic task or switch filters above.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly Study Timetable Section (Semantic Table) -->
+        <section id="study-timetable" class="three">
+            <div class="container">
+                <header class="section-header-left">
+                    <h2>Weekly Academic Study Schedule</h2>
+                    <p>Structured weekly study blocks balancing MIVA Open University B.Sc. Software Engineering coursework and data engineering projects.</p>
+                </header>
+
+                <div tabindex="0" role="region" aria-labelledby="schedule-table-caption" class="table-wrapper">
+                    <table style="--label-2: 'Morning Session'; --label-3: 'Afternoon Session'; --label-4: 'Evening Lab / Project';">
+                        <caption id="schedule-table-caption">MIVA Open University – Weekly Study &amp; Lab Timetable</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Day of Week</th>
+                                <th scope="col">Morning Session (09:00 – 11:30)</th>
+                                <th scope="col">Afternoon Session (14:00 – 16:30)</th>
+                                <th scope="col">Evening Lab / Project (19:00 – 21:00)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Monday</th>
+                                <td>Web Technologies – HTML5 &amp; Semantic Structure</td>
+                                <td>Software Engineering Fundamentals</td>
+                                <td>Web Portfolio Coding Practice</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tuesday</th>
+                                <td>Mathematics &amp; Discrete Structures</td>
+                                <td>Web Technologies – Responsive CSS Grid &amp; Flexbox</td>
+                                <td>Microsoft Fabric ETL Pipeline Lab</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wednesday</th>
+                                <td>Computer Science Foundations</td>
+                                <td>Database Modeling &amp; PostgreSQL Queries</td>
+                                <td>Technical Blog Writing &amp; Documentation</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Thursday</th>
+                                <td>Web Technologies – JavaScript DOM &amp; Validation</td>
+                                <td>Software Requirements &amp; Architecture</td>
+                                <td>Power BI Dashboard Refinement</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Friday</th>
+                                <td>Weekly Quiz &amp; Assessment Review</td>
+                                <td>Git &amp; GitHub Version Control Practice</td>
+                                <td>Open-Source &amp; Peer Study Group</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; 2026 Abdulmaleek Mubaraq (MIVA Open University &bull; B.Sc. Software Engineering). All rights reserved.</li>
+        </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

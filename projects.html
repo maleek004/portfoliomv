@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects | Abdulmaleek Mubaraq - Student Portfolio</title>
+    <meta name="description" content="Academic and industry projects by Abdulmaleek Mubaraq featuring Microsoft Fabric, Power BI, Python, SQL, and Web Technologies." />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+</head>
+<body class="is-preload">
+
+    <!-- Semantic Header & Navigation Sidebar -->
+    <header id="header">
+        <div class="top">
+            <div id="logo">
+                <span class="image avatar48"><img src="images/avatar.jpg" alt="Portrait of Abdulmaleek Mubaraq" /></span>
+                <h1 id="title">Abdulmaleek<br />Mubaraq</h1>
+                <p>B.Sc. Software Engineering<br />Data &amp; Analytics Engineer</p>
+                <span class="uni-badge">MIVA Open University</span>
+            </div>
+
+            <nav id="nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="index.html"><span class="icon solid fa-home">Home</span></a></li>
+                    <li><a href="about.html"><span class="icon solid fa-user-graduate">About Me</span></a></li>
+                    <li><a href="projects.html" class="active" aria-current="page"><span class="icon solid fa-laptop-code">Projects</span></a></li>
+                    <li><a href="planner.html"><span class="icon solid fa-tasks">Academic Planner</span></a></li>
+                    <li><a href="contact.html"><span class="icon solid fa-envelope">Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="bottom">
+            <ul class="icons">
+                <li><a href="https://x.com/abdulmaleekola" target="_blank" rel="noopener" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.linkedin.com/in/mubaraq-abdulmaleek/" target="_blank" rel="noopener" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/maleek004" target="_blank" rel="noopener" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:mubaraqabdulmaleek@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Semantic Content -->
+    <main id="main">
+
+        <!-- Page Hero -->
+        <section class="one dark cover page-hero">
+            <div class="container">
+                <span class="hero-eyebrow"><i class="icon solid fa-laptop-code"></i> Technical Portfolio Showcase</span>
+                <h1>Projects</h1>
+                <p>
+                    Explore my featured projects spanning <strong>Microsoft Fabric ETL Pipelines</strong>, <strong>Interactive Power BI Dashboards</strong>,
+                    <strong>Python Data Investigations</strong>, and <strong>Web Engineering</strong>. Each project includes screenshots, detailed impact notes, and links to live demos or repositories.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Grid & Interactive Filter Section -->
+        <section id="projects-showcase" class="two">
+            <div class="container">
+                <header class="section-header-left">
+                    <h2>Featured Engineering &amp; Analytics Projects</h2>
+                    <p id="project-count-label">Showing 8 of 8 projects</p>
+                </header>
+
+                <!-- Dynamic JavaScript Category Filter Bar -->
+                <div class="project-filter-bar" role="toolbar" aria-label="Filter projects by technology">
+                    <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">All Projects (8)</button>
+                    <button type="button" class="filter-btn" data-category="fabric" aria-pressed="false">Microsoft Fabric (2)</button>
+                    <button type="button" class="filter-btn" data-category="powerbi" aria-pressed="false">Power BI (5)</button>
+                    <button type="button" class="filter-btn" data-category="python" aria-pressed="false">Python (3)</button>
+                </div>
+
+                <!-- Responsive CSS Grid of Projects -->
+                <div class="projects-grid">
+
+                    <!-- Project 1: The Data YouTubers Dashboard (with Embedded Video Walkthrough) -->
+                    <article class="project-card featured-card" data-category="fabric powerbi" id="project-youtubers">
+                        <div>
+                            <span class="project-badge">Flagship Project &bull; Microsoft Fabric + YouTube API + Power BI</span>
+                            <h3>1. The Data YouTubers Dashboard (with Video Walkthrough)</h3>
+
+                            <!-- Attached Video for the Data YouTubers Project -->
+                            <div class="video-player-wrapper">
+                                <video controls preload="metadata" poster="images/DataYoutubersOverview.png">
+                                    <source src="images/linkedin-video.mp4" type="video/mp4" />
+                                    Your browser does not support HTML5 video. <a href="images/linkedin-video.mp4">Download the video here</a>.
+                                </video>
+                            </div>
+
+                            <div class="project-card-thumbs">
+                                <a href="images/DataYoutubersAnalysis.png" data-lightbox="project-1-gallery" data-title="Data YouTubers Dashboard - Analysis View">
+                                    <img src="images/DataYoutubersAnalysis.png" alt="Data YouTubers Dashboard Analysis screenshot" />
+                                </a>
+                                <a href="images/DataYoutubersOverview.png" data-lightbox="project-1-gallery" data-title="Data YouTubers Dashboard - Overview">
+                                    <img src="images/DataYoutubersOverview.png" alt="Data YouTubers Dashboard Overview screenshot" />
+                                </a>
+                            </div>
+
+                            <ul class="project-details">
+                                <li>Built a public dashboard used by <strong>30,000+ people</strong> in the global data community.</li>
+                                <li>Helped <strong>150+ YouTube creators</strong> benchmark their channel performance against peers in the data industry.</li>
+                                <li>Enabled thousands of learners to discover new creators and explore insights about data YouTube channels.</li>
+                                <li>Designed and deployed the entire pipeline in <strong>Microsoft Fabric</strong>: calling the YouTube Data API, transforming and storing data in a medallion architecture, orchestrating daily refreshes with Fabric Pipelines, and visualizing metrics in Power BI.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-card-footer">
+                            <a href="data-youtubers.html" class="view-more-btn"><i class="icon solid fa-play-circle"></i> Live Dashboard &amp; Case Study</a>
+                            <a href="https://www.linkedin.com/posts/mubaraq-abdulmaleek_hey-everyone-so-i-recently-worked-on-a-project-activity-7309121694286143488-oyGc" target="_blank" rel="noopener" class="view-more-btn" style="background-color: #0077b5;"><i class="icon brands fa-linkedin"></i> LinkedIn Post</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Product Analysis Dashboard -->
+                    <article class="project-card" data-category="powerbi" id="project-product-analysis">
+                        <div>
+                            <span class="project-badge">Product Analytics &bull; Power BI</span>
+                            <h3>2. Product Analysis Dashboard (Vendbridge)</h3>
+                            <div class="project-card-thumbs">
+                                <a href="images/vendbridgeEngagement.png" data-lightbox="project-2-gallery" data-title="Product Analysis Dashboard - User Engagement">
+                                    <img src="images/vendbridgeEngagement.png" alt="Vendbridge Engagement Dashboard screenshot" />
+                                </a>
+                                <a href="images/VendbridgeOverview.png" data-lightbox="project-2-gallery" data-title="Product Analysis Dashboard - Executive Overview">
+                                    <img src="images/VendbridgeOverview.png" alt="Vendbridge Overview Dashboard screenshot" />
+                                </a>
+                            </div>
+                            <ul class="project-details">
+                                <li>Provided the product team at Vendbridge with end-to-end visibility into app performance and user behavior across regions, months, and devices.</li>
+                                <li>Built an interactive dashboard tracking total app installs, user signups, signup rate, churn rate, average daily crashes, uninstalls, daily active users (DAU), and total transactions.</li>
+                                <li>Empowered stakeholders to spot growth trends and diagnose high churn or crash rates with month-over-month comparisons.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="product-analysis.html" class="view-more-btn"><i class="icon solid fa-external-link-alt"></i> More Details</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: ETL and Reporting for WWI Retail Store -->
+                    <article class="project-card" data-category="fabric powerbi" id="project-wwi-sales">
+                        <div>
+                            <span class="project-badge">Analytics Engineering &bull; Microsoft Fabric &amp; SQL</span>
+                            <h3>3. ETL &amp; Reporting for WWI Retail Store</h3>
+                            <div class="project-card-thumbs">
+                                <a href="images/WWI ETL flowchart.png" data-lightbox="project-3-gallery" data-title="WWI ETL Architecture Flowchart">
+                                    <img src="images/WWI ETL flowchart.png" alt="WWI ETL Flowchart diagram" />
+                                </a>
+                                <a href="images/WWI dashboard final.png" data-lightbox="project-3-gallery" data-title="WWI Sales Dashboard">
+                                    <img src="images/WWI dashboard final.png" alt="WWI Sales Dashboard screenshot" />
+                                </a>
+                            </div>
+                            <ul class="project-details">
+                                <li>Automated ingestion of clean business data from SQL Server into Microsoft Fabric and stakeholder dashboards without manual intervention.</li>
+                                <li>Helped sales, marketing, and delivery teams make faster decisions by visualizing best-selling products, top-performing regions, and average delivery times.</li>
+                                <li>Implemented a Data Activator alert system that automatically notifies stakeholders when sales or delivery metrics cross predefined thresholds.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="wwi-sales.html" class="view-more-btn"><i class="icon solid fa-external-link-alt"></i> More Details</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Customer Churn Analysis for PhoneNow -->
+                    <article class="project-card" data-category="powerbi" id="project-churn">
+                        <div>
+                            <span class="project-badge">Customer Retention &bull; Power BI &amp; DAX</span>
+                            <h3>4. Customer Churn Analysis for PhoneNow</h3>
+                            <div class="project-card-thumbs">
+                                <a href="images/customerChurnImage1.jpg" data-lightbox="project-4-gallery" data-title="PhoneNow Customer Churn Overview">
+                                    <img src="images/customerChurnImage1.jpg" alt="PhoneNow Customer Churn screenshot 1" />
+                                </a>
+                                <a href="images/CustomerChurnImage2.jpg" data-lightbox="project-4-gallery" data-title="PhoneNow Churn Risk Breakdown">
+                                    <img src="images/CustomerChurnImage2.jpg" alt="PhoneNow Customer Churn screenshot 2" />
+                                </a>
+                            </div>
+                            <ul class="project-details">
+                                <li>Enabled the retention department to identify at-risk telecom customers before they churn.</li>
+                                <li>Provided data-driven insights to improve customer retention strategies across contract types and customer segments.</li>
+                                <li>Delivered actionable recommendations for reducing monthly customer attrition rates.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="churn-analysis.html" class="view-more-btn"><i class="icon solid fa-external-link-alt"></i> More Details</a>
+                            <a href="https://github.com/maleek004/Customer_analysis_project/blob/main/README.md" target="_blank" rel="noopener" class="view-more-btn" style="background-color: #24292e;"><i class="icon brands fa-github"></i> GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: D&I Report for a Telecoms Company -->
+                    <article class="project-card" data-category="powerbi" id="project-diversity">
+                        <div>
+                            <span class="project-badge">HR Analytics &bull; Power BI</span>
+                            <h3>5. Diversity &amp; Inclusion (D&amp;I) Telecoms Report</h3>
+                            <div class="project-card-thumbs">
+                                <a href="images/HRAnalysisImage1.jpg" data-lightbox="project-5-gallery" data-title="D&I Analysis - Executive Summary">
+                                    <img src="images/HRAnalysisImage1.jpg" alt="HR Diversity Analysis screenshot 1" />
+                                </a>
+                                <a href="images/HRAnalysisImage2.jpg" data-lightbox="project-5-gallery" data-title="D&I Analysis - Promotion & Turnover Breakdown">
+                                    <img src="images/HRAnalysisImage2.jpg" alt="HR Diversity Analysis screenshot 2" />
+                                </a>
+                            </div>
+                            <ul class="project-details">
+                                <li>Defined and visualized KPIs related to hiring, promotion, performance ratings, and turnover with a focus on gender balance.</li>
+                                <li>Streamlined executive HR reporting, reducing the time needed to evaluate diversity metrics from days to seconds.</li>
+                                <li>Uncovered actionable insights into gender representation across departments and seniority levels.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/maleek004/Diversity-and-inclusion-analysis" target="_blank" rel="noopener" class="view-more-btn"><i class="icon brands fa-github"></i> View Repository</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Python TMDB Movie Dataset Investigation -->
+                    <article class="project-card" data-category="python" id="project-tmdb">
+                        <div>
+                            <span class="project-badge">Exploratory Data Analysis &bull; Python</span>
+                            <h3>6. Python: TMDB Movie Dataset Investigation</h3>
+                            <div class="project-card-thumbs">
+                                <a href="images/movieAnalysisImage1.jpg" data-lightbox="project-6-gallery" data-title="TMDB Movie Dataset Analysis - Chart 1">
+                                    <img src="images/movieAnalysisImage1.jpg" alt="TMDB Movie Analysis visualization 1" />
+                                </a>
+                                <a href="images/movieAnalysisImage2.jpg" data-lightbox="project-6-gallery" data-title="TMDB Movie Dataset Analysis - Chart 2">
+                                    <img src="images/movieAnalysisImage2.jpg" alt="TMDB Movie Analysis visualization 2" />
+                                </a>
+                            </div>
+                            <ul class="project-details">
+                                <li>Analyzed key metrics including genre popularity, budget vs. revenue trends, and average user ratings across thousands of films.</li>
+                                <li>Created visualizations identifying the most profitable genres and optimal release periods for content planning.</li>
+                                <li>Documented reproducible statistical findings in a structured Jupyter Notebook using Pandas, NumPy, and Matplotlib.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/maleek004/Udacity_data_analysis_nanodegree_projects/blob/main/project_1_investigate_a_dataset/project1.ipynb" target="_blank" rel="noopener" class="view-more-btn"><i class="icon brands fa-github"></i> View Notebook</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 7: Python Twitter Page Analysis -->
+                    <article class="project-card" data-category="python" id="project-twitter">
+                        <div>
+                            <span class="project-badge">Data Wrangling &bull; Python &amp; APIs</span>
+                            <h3>7. Python: WeRateDogs Twitter Page Analysis</h3>
+                            <div class="project-card-thumbs">
+                                <a href="images/TwitterAnalysisImage1.jpg" data-lightbox="project-7-gallery" data-title="Twitter Page Analysis - Engagement Patterns">
+                                    <img src="images/TwitterAnalysisImage1.jpg" alt="Twitter Page Analysis chart 1" />
+                                </a>
+                                <a href="images/TwitterAnalysisImage2.jpg" data-lightbox="project-7-gallery" data-title="Twitter Page Analysis - Breed Popularity">
+                                    <img src="images/TwitterAnalysisImage2.jpg" alt="Twitter Page Analysis chart 2" />
+                                </a>
+                            </div>
+                            <ul class="project-details">
+                                <li>Identified key audience engagement patterns, highlighting peak posting hours that maximize retweet and favorite visibility.</li>
+                                <li>Refined content strategy insights by uncovering the most popular and highest-rated dog breeds.</li>
+                                <li>Implemented rigorous programmatic data wrangling and cleaning across multi-source JSON, CSV, and image prediction datasets.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/maleek004/Udacity_data_analysis_nanodegree_projects/tree/main/project_2_data_wrangling" target="_blank" rel="noopener" class="view-more-btn"><i class="icon brands fa-github"></i> View Repository</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 8: Python Loan Data Analysis -->
+                    <article class="project-card" data-category="python" id="project-loan">
+                        <div>
+                            <span class="project-badge">Financial Risk Analytics &bull; Python &amp; Seaborn</span>
+                            <h3>8. Python: Prosper Loan Data Analysis</h3>
+                            <div class="project-card-thumbs">
+                                <a href="images/LoanAnalysisImage1.jpg" data-lightbox="project-8-gallery" data-title="Loan Data Analysis - Credit Risk Factors">
+                                    <img src="images/LoanAnalysisImage1.jpg" alt="Prosper Loan Analysis chart 1" />
+                                </a>
+                                <a href="images/LoanAnalysisImage2.jpg" data-lightbox="project-8-gallery" data-title="Loan Data Analysis - Borrower Trends">
+                                    <img src="images/LoanAnalysisImage2.jpg" alt="Prosper Loan Analysis chart 2" />
+                                </a>
+                            </div>
+                            <ul class="project-details">
+                                <li>Improved loan underwriting insights by isolating key borrower attributes correlated with loan defaults.</li>
+                                <li>Created automated multivariate visual reports tracking borrower APR trends, credit scores, and repayment patterns.</li>
+                                <li>Highlighted early risk indicators to support proactive credit portfolio management.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://github.com/maleek004/Udacity_data_analysis_nanodegree_projects/blob/main/project_3_data_visualization/Part_I_exploration_template.ipynb" target="_blank" rel="noopener" class="view-more-btn"><i class="icon brands fa-github"></i> View Notebook</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; 2026 Abdulmaleek Mubaraq (MIVA Open University &bull; B.Sc. Software Engineering). All rights reserved.</li>
+        </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
