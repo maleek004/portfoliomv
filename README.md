@@ -1,29 +1,58 @@
-# Responsive Student Portfolio and Academic Management Website
+# Student Portfolio & Academic Management Website
 
-**Student:** Abdulmaleek Mubaraq  
-**Institution:** MIVA Open University  
-**Program:** B.Sc. Software Engineering  
+A responsive, multi-page personal academic portfolio and student management platform built with semantic **HTML5**, modern **CSS3**, and vanilla **JavaScript (ES6+)**.
 
----
-
-## Project Overview
-
-This multi-page responsive website serves as a personal academic portfolio and interactive student management platform. Built with semantic **HTML5**, modern **CSS3** (Flexbox, CSS Grid, and Container Queries), and vanilla **JavaScript (ES6+)**, it showcases academic qualifications, software and data engineering projects, an interactive academic task planner, and a client-side validated contact form.
+- **Student:** Abdulmaleek Mubaraq  
+- **Institution:** MIVA Open University — *B.Sc. Software Engineering*  
+- **Live Website:** https://maleek004.github.io/portfoliomv/  
+- **Repository:** https://github.com/maleek004/portfoliomv  
 
 ---
 
-## Multi-Page Architecture
+## Tech Stack
 
-1. **Homepage (`index.html`)**
-   - Student name, profile photograph (`images/avatar.jpg`), welcome message, brief biography, multi-page navigation sidebar, key highlights grid, featured video walkthrough (`images/linkedin-video.mp4`), and technical blog posts.
-2. **About Me Page (`about.html`)**
-   - Educational background at **MIVA Open University (B.Sc. Software Engineering)**, semantic responsive HTML `<table>` of qualifications and certifications, career aspirations, technical skills (`<ul>` lists and skill tags), hobbies & interests, and verified certificate gallery.
-3. **Projects Page (`projects.html`)**
-   - 8 engineering and data analytics projects with screenshots, descriptions, live case-study subpages (`data-youtubers.html`, `product-analysis.html`, `wwi-sales.html`, `churn-analysis.html`), embedded HTML5 `<video>` walkthrough for *The Data YouTubers Dashboard*, and dynamic JavaScript category filtering.
-4. **Academic Planner Page (`planner.html`)**
-   - Interactive JavaScript task management system allowing users to **add tasks**, **mark tasks as completed**, **delete tasks**, and **filter tasks** by status with live progress tracking and `localStorage` persistence, alongside a weekly academic study timetable (`<table>`).
-5. **Contact Page (`contact.html`)**
-   - Accessible contact form (**Name**, **Email Address**, **Phone Number**, **Message**) with custom JavaScript validation enforcing:
-     - No field is empty
-     - Valid email address format
-     - Phone number contains only digits (`0–9`)
+- **HTML5:** Semantic landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`), accessible forms, responsive tables, and native `<video>` multimedia.
+- **CSS3:** External stylesheet (`assets/css/main.css`) using CSS Custom Properties, Flexbox, CSS Grid, Container Queries (`@container`), transitions, and mobile media queries.
+- **JavaScript (ES6+):** Modular client-side logic (`assets/js/portfolio.js`) using arrays, higher-order functions (`.filter()`, `.map()`), DOM manipulation, `localStorage`, `WeakSet`, regex, and the Constraint Validation API.
+
+---
+
+## Site Architecture
+
+| Page | File | Purpose & Key Features |
+| :--- | :--- | :--- |
+| **Homepage** | `index.html` | Student profile, welcome hero, biography grid, academic highlights, technical articles, and embedded HTML5 `<video>` walkthrough. |
+| **About Me** | `about.html` | Educational background, career aspirations, responsive education/certifications `<table>`, categorized skills, hobbies, and Lightbox2 certificate gallery. |
+| **Projects** | `projects.html` | 8 engineering & analytics projects with interactive JS category filtering (*All, Fabric, Power BI, Python*), embedded video walkthrough, and case-study pages. |
+| **Academic Planner** | `planner.html` | Interactive JS task manager (add, complete/undo, delete, filter tasks, live progress bar, `localStorage` persistence) and weekly study timetable `<table>`. |
+| **Contact** | `contact.html` | Accessible 4-field form with custom JS validation (non-empty checks, valid email format, digits-only phone number) and direct contact links. |
+
+---
+
+## JavaScript Highlights (`assets/js/portfolio.js`)
+
+- **Active Navigation (`initNavigation`):** Detects the current route and applies `.active` and `aria-current="page"` dynamically.
+- **Project Filtering (`initProjectsFilter`):** Filters `.project-card` elements by `data-category` and updates the visible project count.
+- **Academic Planner (`initAcademicPlanner`):** Manages a `tasks` array of objects with XSS-safe DOM rendering (`document.createElement` + `textContent`) and `localStorage` persistence.
+- **Form Validation (`initContactForm`):** Uses a `WeakSet` to defer field errors until interaction (`blur`), clears errors on `input`, validates email & digits-only phone (`/^\d+$/`), and syncs `aria-invalid` / `aria-describedby`.
+
+---
+
+## Project Structure
+
+```text
+├── index.html                 # Homepage
+├── about.html                 # About Me & Education
+├── projects.html              # Projects Showcase & Filter
+├── planner.html               # Interactive Academic Planner
+├── contact.html               # Validated Contact Form
+├── data-youtubers.html        # Case Study: Data YouTubers Dashboard
+├── product-analysis.html      # Case Study: Vendbridge Product Analytics
+├── wwi-sales.html             # Case Study: WWI Retail ETL & Reporting
+├── churn-analysis.html        # Case Study: PhoneNow Customer Churn
+├── assets/
+│   ├── css/main.css           # Primary external stylesheet
+│   └── js/portfolio.js        # Custom interactive & validation logic
+├── images/                    # Screenshots, avatar, certificates & linkedin-video.mp4
+└── .nojekyll                  # GitHub Pages static serving configuration
+```
